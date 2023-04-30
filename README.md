@@ -31,13 +31,13 @@
 Клонировать репозиторий:
 
 ```
-git clone https://github.com/airatbakiev/infra_sp2.git
+git clone https://github.com/o5c1ll47or/yamdb_final.git
 ```
 
 Перейти в папку infra и запустить docker-compose.yaml
 (при установленном и запущенном Docker)
 ```
-cd infra_sp2/infra
+cd yamdb_final/infra
 docker-compose up
 ```
 

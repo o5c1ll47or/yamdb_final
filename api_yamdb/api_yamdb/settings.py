@@ -1,7 +1,9 @@
 import os
 from datetime import timedelta
+from pathlib import Path
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure")
@@ -41,7 +43,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'api_yamdb.urls'
 
-TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
+TEMPLATES_DIR = BASE_DIR / 'templates'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -111,9 +113,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # STATICFILES_DIRS необходимо закомментировать или удалить
 # STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static/')),
-                    ('redoc', '/app/templates/')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

@@ -75,12 +75,12 @@ docker-compose exec web python manage.py collectstatic --no-input
 
 Проверьте работоспособность приложения, для этого перейдите на страницы:
 
-[http://<ip-адрес сервера>/admin](http://0.0.0.0/admin)
+[http://84.201.139.151/admin](http://84.201.139.151/admin)
 
-[http://<ip-адрес сервера>/v1/](http://0.0.0.0/v1/)
+[http://84.201.139.151/api/v1/users/](http://84.201.139.151/api/v1/users/)
 
 ## Документация к проекту
 
 Документация для API после установки доступна по адресу 
 
-[http://<ip-адрес сервера>/redoc](http://0.0.0.0/redoc)
+[http://84.201.139.151/redoc](http://84.201.139.151/redoc)

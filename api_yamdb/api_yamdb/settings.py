@@ -3,6 +3,8 @@ from datetime import timedelta
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+DOTENV_PATH = os.path.join(os.path.dirname(BASE_DIR), 'infra', '.env')
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure")
 
